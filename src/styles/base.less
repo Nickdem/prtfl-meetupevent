@@ -1,0 +1,18 @@
+@import "colors.less";
+@import "mixins.less";
+
+body {
+  background-color: @black;
+  background-image: url(../img/hero2.jpg);
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-family: sans-serif;
+  color: @black;
+  .textOptions(16px, 24px);
+}
+
+.container {
+  max-width: 1440px;
+  .margins(@l: auto, @r: auto);
+}

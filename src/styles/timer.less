@@ -1,0 +1,25 @@
+@import "colors.less";
+@import "mixins.less";
+
+.timer {
+  color: @white;
+  .paddings(@t: 9em, @b: 9em);
+
+  &-container {
+    max-width: 916px;
+    text-align: center;
+    border: 4px solid @green;
+    border-radius: 1.6em;
+    .paddings(@t: 2em, @r: 2em, @b: 2em, @l: 2em);
+    .flexContainer(center, @ai: flex-start, @g: 3em);
+    .margins(@l: auto, @r: auto);
+
+    b {
+      .textOptions(6em, 1em);
+    }
+
+    i {
+      .textOptions(2em, 1em);
+    }
+  }
+}

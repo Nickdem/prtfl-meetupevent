@@ -1,0 +1,38 @@
+@import "colors.less";
+@import "mixins.less";
+
+.header {
+  .flexContainer(space-between);
+  .paddings(@t: 20px, @b: 20px);
+
+  &-logo {
+    position: relative;
+    .paddings(@l: 70px);
+
+    h2 {
+      color: @white;
+      .textOptions(1.8em, 1em);
+    }
+
+    h3 {
+      color: @green;
+      .textOptions(1.4em, 1em);
+    }
+
+    &::before {
+      content: "";
+      background-color: @orangered;
+      border-radius: 50%;
+      .sizes(60px, 60px);
+      .positions(absolute, @t: -5px, @l: 0);
+    }
+  }
+
+  &-links {
+    .flexContainer(space-between, @g: 20px);
+
+    a {
+      color: @white;
+    }
+  }
+}
