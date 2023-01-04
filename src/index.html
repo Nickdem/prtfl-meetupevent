@@ -7,20 +7,22 @@
     <title>Test</title>
   </head>
   <body>
-    <header class="header container">
-      <a class="header-logo" href="#">
-        <h2>MEETUP</h2>
-        <h3>EVENT</h3>
-      </a>
-      <nav class="header-nav">
-        <ul class="header-links">
-          <li class="header-link"><a href="#">DETAILS</a></li>
-          <li class="header-link"><a href="#">SPEAKERS</a></li>
-          <li class="header-link"><a href="#">SPONSORS</a></li>
-          <li class="header-link"><a href="#">PAST EVENT</a></li>
-          <li class="header-link"><a href="#">CONTACTS</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="header-inner container">
+        <a class="header-logo" href="#">
+          <h2>MEETUP</h2>
+          <h3>EVENT</h3>
+        </a>
+        <nav class="header-nav">
+          <ul class="header-links">
+            <li class="header-link"><a href="#">DETAILS</a></li>
+            <li class="header-link"><a href="#">SPEAKERS</a></li>
+            <li class="header-link"><a href="#">SPONSORS</a></li>
+            <li class="header-link"><a href="#">PAST EVENT</a></li>
+            <li class="header-link"><a href="#">CONTACTS</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="timer">
@@ -51,57 +53,90 @@
         </p>
       </section>
       <section class="welcome">
-        <h2>Welcome!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Exercitationem repellendus beatae in veniam, pariatur fuga quis minus
-          mollitia eos, nemo esse facilis cumque aspernatur aut?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
-          consectetur aut maiores nobis corrupti enim iure. Incidunt laborum,
-          magnam earum perferendis possimus maxime, corporis accusamus voluptate
-          tempore facilis iusto minus.
-        </p>
-        <form>
-          <h3>Sign up for our event</h3>
-          <input type="text" placeholder="Enter your name" />
-          <input type="email" placeholder="Enter your email" />
-          <input type="tel" placeholder="Phone number" />
-          <button>Let me in!</button>
-          <p>
-            Hurry up, Limited seats availble <br />
-            *we will never spam your email
-          </p>
-        </form>
-      </section>
-      <section class="details">
-        <div class="advantages">
-          <div class="advantage">
-            <img class="advantage-img" src="./img/community.png" alt="" />
-            <h3 class="advantage-name">Community</h3>
-            <p class="advantage-description">
+        <div class="welcome-inner container">
+          <div class="welcome-content">
+            <h2 class="welcome-title section-title">Welcome!</h2>
+            <p class="welcome-text section-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="welcome-text section-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Exercitationem repellendus beatae in veniam, pariatur fuga quis
+              minus mollitia eos, nemo esse facilis cumque aspernatur aut?
+            </p>
+            <p class="welcome-text section-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+              consectetur aut maiores nobis corrupti enim iure. Incidunt
+              laborum, magnam earum perferendis possimus maxime, corporis
+              accusamus voluptate tempore facilis iusto minus.
+            </p>
+          </div>
+
+          <form class="welcome-form form">
+            <fieldset class="form-fieldset">
+              <legend class="form-title subtitle">Sign up for our event</legend>
+              <input
+                class="form-field"
+                type="text"
+                placeholder="Enter your name"
+              />
+              <input
+                class="form-field"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <input class="form-field" type="tel" placeholder="Phone number" />
+              <button class="form-button" type="submit">Let me in!</button>
+              <p class="form-helper">
+                Hurry up, Limited seats availble <br />
+                *we will never spam your email
+              </p>
+            </fieldset>
+          </form>
+        </div>
+        <div class="welcome-details details container">
+          <div class="details-item">
+            <img
+              class="details-img"
+              src="./img/community.png"
+              width="300px"
+              height="300px"
+              alt=""
+            />
+            <h3 class="details-name subtitle">Community</h3>
+            <p class="details-description section-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus mollitia, corrupti similique nam esse et sequi
               expedita maiores, quis vel ipsum, modi maxime dolor labore ullam
               at nisi culpa ab.
             </p>
           </div>
-          <div class="advantage">
-            <img class="advantage-img" src="./img/community.png" alt="" />
-            <h3 class="advantage-name">Talk Shop</h3>
-            <p class="advantage-description">
+          <div class="details-item">
+            <img
+              class="details-img"
+              src="./img/talk.png"
+              width="300px"
+              height="300px"
+              alt=""
+            />
+            <h3 class="details-name subtitle">Talk Shop</h3>
+            <p class="details-description section-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus mollitia, corrupti similique nam esse et sequi
               expedita maiores, quis vel ipsum, modi maxime dolor labore ullam
               at nisi culpa ab.
             </p>
           </div>
-          <div class="advantage">
-            <img class="advantage-img" src="./img/community.png" alt="" />
-            <h3 class="advantage-name">Stories</h3>
-            <p class="advantage-description">
+          <div class="details-item">
+            <img
+              class="details-img"
+              src="./img/story.png"
+              width="300px"
+              height="300px"
+              alt=""
+            />
+            <h3 class="details-name subtitle">Stories</h3>
+            <p class="details-description section-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus mollitia, corrupti similique nam esse et sequi
               expedita maiores, quis vel ipsum, modi maxime dolor labore ullam

@@ -1,0 +1,14 @@
+@import "colors.less";
+@import "mixins.less";
+
+.details {
+  .flexContainer(space-between, @g: 2em);
+
+  &-item {
+    text-align: center;
+  }
+
+  &-name {
+    .paddings(@t: 1em, @b:1em);
+  }
+}

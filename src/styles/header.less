@@ -2,8 +2,10 @@
 @import "mixins.less";
 
 .header {
-  .flexContainer(space-between);
-  .paddings(@t: 20px, @b: 20px);
+  &-inner {
+    .flexContainer(space-between);
+    .paddings(@t: 20px, @b: 20px);
+  }
 
   &-logo {
     position: relative;

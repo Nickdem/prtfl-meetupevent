@@ -4,7 +4,7 @@
 body {
   background-color: @black;
   background-image: url(../img/hero2.jpg);
-  background-size: 1920px 1080px;
+  background-size: 100vw auto;
   background-repeat: no-repeat;
   background-position: 0 0;
   font-family: sans-serif;
@@ -15,4 +15,23 @@ body {
 .container {
   max-width: 1440px;
   .margins(@l: auto, @r: auto);
+}
+
+.section-title {
+  .textOptions(3em, 2em, 700);
+}
+
+.subtitle {
+  .textOptions(2em, 1em, 700);
+}
+
+.section-text {
+  .textOptions(1.4em, 1em);
+}
+
+a:focus,
+input:focus,
+button:focus {
+  box-shadow: 0 0 5px @green;
+  outline: none;
 }
