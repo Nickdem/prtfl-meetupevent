@@ -1,0 +1,64 @@
+@import "colors.less";
+@import "mixins.less";
+
+.timetable {
+  max-width: 916px;
+  .margins(@l: auto, @r: auto);
+
+  table {
+    .sizes(@w: 100%);
+  }
+
+  thead {
+    background-color: @green;
+  }
+
+  th {
+    background-color: @green;
+    color: @white;
+    text-align: center;
+    .textOptions(2em, 3em, 700);
+
+    &:first-child {
+      border-top-left-radius: 1em;
+    }
+
+    &:last-child {
+      border-top-right-radius: 1em;
+    }
+  }
+
+  tbody {
+    background-color: @lightgrey;
+
+    tr:nth-child(odd) {
+      background-color: @darkgrey;
+    }
+
+    tr:nth-child(even) {
+      background-color: @lightgrey;
+    }
+  }
+
+  td {
+    .textOptions(1.6em, 3em, 400);
+    text-align: center;
+    color: @white;
+  }
+
+  tr:last-child {
+    td:first-child {
+      border-bottom-left-radius: 1em;
+    }
+
+    td:last-child {
+      border-bottom-right-radius: 1em;
+    }
+  }
+
+  button {
+    border-radius: 50%;
+    .textOptions(1em, 1em, 400);
+    .margins(@l: 0.6em, @r: 0.6em);
+  }
+}
