@@ -1,0 +1,18 @@
+@import "colors.less";
+@import "mixins.less";
+
+.reward {
+  background-color: @darkgrey;
+  text-align: right;
+  .paddings(@t: 1.6em, @b: 1.6em);
+
+  &-title {
+    color: @white;
+  }
+
+  &-description {
+    color: @white;
+    .sizes(@w: 60%);
+    .margins(@b: 1.6em, @l: auto);
+  }
+}
