@@ -1,0 +1,44 @@
+@import "colors.less";
+@import "mixins.less";
+
+.speakers {
+  background-color: @white;
+
+  &-list {
+    .paddings(@t: 4em, @b: 4em);
+    .flexContainer(@jc: center, @fw: wrap, @g: 4em);
+  }
+}
+
+.speaker {
+  .positions(@p: relative);
+
+  &-image {
+    border-radius: 2em;
+  }
+
+  &-content {
+    transition: all 0.44s linear;
+    border-radius: 2em;
+    background-color: @green;
+    overflow: hidden;
+    .sizes(@w: 0px, @h: 0px);
+    .positions(@p: absolute, @t: 0, @l: 0, @b: 0, @r: 0);
+    .flexContainer(@jc: space-between, @fd: column, @ai: flex-start);
+  }
+
+  &-name {
+    color: @white;
+    border-bottom: 2px solid @white;
+    .paddings(@b: 0.4em);
+  }
+
+  &-description {
+    color: @white;
+  }
+
+  &:hover &-content {
+    .paddings(@t: 1.6em, @l: 1.6em, @r: 1.6em, @b: 1.6em);
+    .sizes(@w: 100%, @h: 100%);
+  }
+}
