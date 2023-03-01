@@ -3,6 +3,7 @@
 
 .speakers {
   background-color: @white;
+  .paddings(@t: 4em);
 
   &-list {
     .paddings(@t: 4em, @b: 4em);
@@ -12,9 +13,11 @@
 
 .speaker {
   .positions(@p: relative);
+  .sizes(@w:30%);
 
   &-image {
     border-radius: 2em;
+    .sizes(@w:100%);
   }
 
   &-content {

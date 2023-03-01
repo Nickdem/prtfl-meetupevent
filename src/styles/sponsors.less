@@ -4,4 +4,14 @@
 .sponsors {
   text-align: center;
   color: @white;
+  .paddings(@t: 4em, @b: 4em);
+
+  &-description {
+    .margins(@b: 1em);
+  }
+
+  &-list {
+    .paddings(@t:2em, @b:2em);
+    .flexContainer(@jc: center, @fw: wrap, @g: 2em);
+  }
 }

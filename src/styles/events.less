@@ -3,4 +3,24 @@
 
 .events {
   background-color: @white;
+  text-align: center;
+  .paddings(@t: 4em, @b: 4em);
+
+  &-title,
+  &-description {
+    text-align: left;
+  }
+
+  &-list {
+    .paddings(@t: 2em, @b: 2em);
+    .flexContainer(@jc: center, @fw: wrap);
+  }
+
+  &-link {
+    .sizes(@w: 40%);
+  }
+
+  &-image {
+    .sizes(@w: 100%,@h: 100%);
+  }
 }
