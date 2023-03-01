@@ -2,10 +2,12 @@
 @import "mixins.less";
 
 .details {
-  .flexContainer(space-between, @g: 2em);
+  .paddings(@t: 5em, @b: 5em);
+  .flexContainer(@jc: center, @g: 2em, @fw: wrap);
 
   &-item {
     text-align: center;
+    max-width: 430px;
   }
 
   &-name {

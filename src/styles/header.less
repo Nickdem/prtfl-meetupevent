@@ -2,9 +2,14 @@
 @import "mixins.less";
 
 .header {
+  .paddings(@t: 1.6em, @b: 1.6em);
+
   &-inner {
-    .flexContainer(space-between);
-    .paddings(@t: 1.6em, @b: 1.6em);
+    .flexContainer(@jc: space-between);
+
+    @media (max-width: 767px) {
+      .flexContainer(@jc: center, @fd: column, @g: 2em);
+    }
   }
 
   &-logo {
@@ -29,12 +34,28 @@
       .positions(absolute, @t: -5px, @l: 0);
     }
   }
-
+  &-navigation {
+    @media (max-width: 550px) {
+      display: none;
+      background-color: @white;
+      z-index: 99;
+      .positions(@p: fixed, @t: 0, @l: 0, @b: 0, @r: 0);
+      .sizes(@w: 100vw, @h: 100vh);
+    }
+  }
   &-links {
-    .flexContainer(space-between, @g: 20px);
+    .flexContainer(@jc: space-between, @g: 20px);
 
     a {
       color: @white;
+
+      @media (max-width: 550px) {
+        color: @darkgrey;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .flexContainer(@jc: center, @fd: column, @g: 2em);
     }
   }
 }

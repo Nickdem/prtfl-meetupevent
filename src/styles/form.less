@@ -10,10 +10,18 @@
     .paddings(@t: 1em, @l: 1em, @b: 1em, @r: 1em);
     .margins(@t: 2em);
     .sizes(100%);
+
+    @media (max-width: 550px) {
+      .margins(@t: 1.4em);
+    }
   }
 
   &-button {
     .sizes(100%);
     .margins(@t: 3em, @b: 1em);
+
+    @media (max-width: 550px) {
+      .margins(@t: 1.4em, @b: 0.6em);
+    }
   }
 }
