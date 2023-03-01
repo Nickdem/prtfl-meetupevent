@@ -12,9 +12,28 @@ body {
   .textOptions(16px, 24px);
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1440px;
+  .paddings(@l: 2em, @r: 2em);
   .margins(@l: auto, @r: auto);
+}
+
+.rotate {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    transform: rotate(-3deg);
+    background-color: inherit;
+    z-index: -10;
+    .sizes(@w: 110%, @h: 300px);
+    .positions(@p: absolute, @t: -55px, @l: 0px);
+  }
 }
 
 .section-title {
