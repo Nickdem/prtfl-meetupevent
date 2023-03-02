@@ -10,7 +10,7 @@ export class Timer {
     return Math.floor(num);
   }
 
- getTimeLeft() {
+  getTimeLeft() {
     const s = (this.eventTime - this.getCurrentDate()) / 1000;
     const m = s / 60;
     const h = m / 60;

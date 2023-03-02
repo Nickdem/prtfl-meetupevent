@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     menu.clickHandler();
   };
 
-  const t = new Timer()
+  const t = new Timer();
 
   // setInterval(() => {
   //   t.getTimeLeft()
