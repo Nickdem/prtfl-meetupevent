@@ -1,15 +1,15 @@
 export class Menu {
-  private openClsName = "header-navigation--open";
-  private el;
-  private btn;
+  private openCls = "header-navigation--open";
+  private navContainer;
+  private menuBtn;
 
-  constructor(el: Element, btn: HTMLButtonElement) {
-    this.el = el;
-    this.btn = btn;
+  constructor(navContainer: Element, menuBtn: HTMLButtonElement) {
+    this.navContainer = navContainer;
+    this.menuBtn = menuBtn;
   }
 
   public clickHandler() {
-    if (this.btn.innerText == "x") {
+    if (this.menuBtn.innerText == "x") {
       this.close();
     } else {
       this.open();
@@ -17,12 +17,18 @@ export class Menu {
   }
 
   private open() {
-    this.el.classList.add(this.openClsName);
-    this.btn.innerText = "x";
+    this.navContainer.classList.add(this.openCls);
+    this.menuBtn.innerText = "x";
   }
 
   private close() {
-    this.el.classList.remove(this.openClsName);
-    this.btn.innerText = "menu";
+    this.navContainer.classList.remove(this.openCls);
+    this.menuBtn.innerText = "menu";
+  }
+
+  init() {
+    this.menuBtn.onclick = () => {
+      this.clickHandler();
+    };
   }
 }

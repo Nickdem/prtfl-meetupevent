@@ -1,6 +1,14 @@
+interface ITimeObj {
+  [key: string]: number;
+}
+
 export class Timer {
   private eventTime: number = new Date(2024, 0).getTime();
-  constructor() {}
+  private elms: NodeListOf<Element>;
+
+  constructor(elms: NodeListOf<Element>) {
+    this.elms = elms;
+  }
 
   private getCurrentDate() {
     return Date.now();
@@ -10,7 +18,7 @@ export class Timer {
     return Math.floor(num);
   }
 
-  getTimeLeft() {
+  private getTimeLeft(): ITimeObj {
     const s = (this.eventTime - this.getCurrentDate()) / 1000;
     const m = s / 60;
     const h = m / 60;
@@ -18,6 +26,22 @@ export class Timer {
     const hours = this.floor(h % 24);
     const minutes = this.floor(m % 60);
     const seconds = this.floor(s % 60);
-    console.log(days, hours, minutes, seconds);
+    return { days, hours, minutes, seconds };
+  }
+
+  private setTimerHTML() {
+    const time = this.getTimeLeft();
+
+    for (let i of this.elms) {
+      const elId: string = i.id;
+      const value = time[elId].toString();
+      i.innerHTML = value.length > 1 ? value : "0" + value;
+    }
+  }
+
+  init() {
+    setInterval(() => {
+      this.setTimerHTML();
+    }, 1000);
   }
 }
