@@ -32,7 +32,7 @@ export class Timer {
   private setTimerHTML() {
     const time = this.getTimeLeft();
 
-    for (let i of this.elms) {
+    for (const i of this.elms) {
       const elId: string = i.id;
       const value = time[elId].toString();
       i.innerHTML = value.length > 1 ? value : "0" + value;
