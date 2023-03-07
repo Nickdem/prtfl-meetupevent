@@ -66,9 +66,13 @@
 
   button {
     border-radius: 50%;
-    .sizes(@w: 25px, @h:25px);
+    .sizes(@w: 36px, @h: 36px);
     .textOptions(1em, 1em, 400);
     .margins(@l: 0.6em, @r: 0.6em);
+
+    @media (max-width: 767px) {
+      .sizes(@w: 24px, @h: 24px);
+    }
   }
 
   &-description {
