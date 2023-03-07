@@ -52,6 +52,15 @@
     @media (max-width: 767px) {
       .textOptions(1em, 2.6em, 400);
     }
+    @media (max-width: 550px) {
+      .textOptions(1em, 1.6em, 400);
+    }
+  }
+
+  tr {
+    td:last-child {
+      .sizes(@w: 50px);
+    }
   }
 
   tr:last-child {
@@ -79,6 +88,7 @@
     & td {
       text-align: left;
       .paddings(@l: 0.6em, @r: 0.6em);
+      .textOptions(1em, 1.6em, 400);
     }
   }
 }

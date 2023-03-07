@@ -17,23 +17,22 @@
   <body>
     <header class="header">
       <div class="header-inner container">
-        <a class="header-logo" href="#">
+        <a class="header-logo" href="#main">
           <h2>MEETUP</h2>
           <h3>EVENT</h3>
         </a>
         <nav class="header-navigation">
           <ul class="header-links">
-            <li class="header-link"><a href="#">DETAILS</a></li>
-            <li class="header-link"><a href="#">SPEAKERS</a></li>
-            <li class="header-link"><a href="#">SPONSORS</a></li>
-            <li class="header-link"><a href="#">PAST EVENT</a></li>
-            <li class="header-link"><a href="#">CONTACTS</a></li>
+            <li class="header-link"><a href="#details">DETAILS</a></li>
+            <li class="header-link"><a href="#speakers">SPEAKERS</a></li>
+            <li class="header-link"><a href="#sponsors">SPONSORS</a></li>
+            <li class="header-link"><a href="#events">PAST EVENT</a></li>
           </ul>
           <button class="header-menu">menu</button>
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main">
       <section class="timer">
         <p class="timer-container">
           <span>
@@ -118,7 +117,7 @@
             </fieldset>
           </form>
         </div>
-        <div class="welcome-details container">
+        <div class="welcome-details container" id="details">
           <div class="details">
             <div class="details-item">
               <img
@@ -223,12 +222,15 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In pariatur
             fugiat fuga! Iste, adipisci doloribus.
           </p>
-          <button class="reward-button button button--green">
+          <button
+            class="reward-button button button--green dialog-btn"
+            id="prize"
+          >
             I want a prize
           </button>
         </div>
       </div>
-      <section class="speakers rotate">
+      <section class="speakers rotate" id="speakers">
         <div class="speakers-inner container">
           <h2 class="speakers-title section-title">Speakers</h2>
           <p class="speakers-description section-text">
@@ -384,7 +386,7 @@
           </div>
         </div>
       </section>
-      <section class="sponsors rotate">
+      <section class="sponsors rotate" id="sponsors">
         <div class="sponsors-inner container">
           <h2 class="sponsors-title section-title">Sponsors</h2>
           <p class="sponsors-description section-text">
@@ -419,12 +421,15 @@
               />
             </a>
           </div>
-          <button class="sponsors-button button button--green">
+          <button
+            class="sponsors-button button button--green dialog-btn"
+            id="sponsor"
+          >
             Sponsor Us
           </button>
         </div>
       </section>
-      <section class="events rotate">
+      <section class="events rotate" id="events">
         <div class="events-inner container">
           <h2 class="events-title section-title">Past Event</h2>
           <p class="events-description section-text">
@@ -452,6 +457,7 @@
         </div>
       </section>
     </main>
+    <dialog class="dialog"></dialog>
     <footer class="footer">
       <ul class="footer-social">
         <li>

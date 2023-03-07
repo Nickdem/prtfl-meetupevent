@@ -1,6 +1,10 @@
 @import "colors.less";
 @import "mixins.less";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: @black;
   background-image: url(../img/hero2.jpg);
@@ -89,4 +93,19 @@ input:focus,
 button:focus {
   box-shadow: 0 0 5px @yellow;
   outline: none;
+}
+
+.dialog {
+  background-color: @white;
+  border-radius: 10px;
+
+  & p {
+    .textOptions(2em, 1em, 700);
+    color: @darkgrey;
+  }
+
+  &::backdrop {
+    background-color: @white;
+    opacity: 0.5;
+  }
 }
