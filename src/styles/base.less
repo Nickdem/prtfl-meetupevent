@@ -98,6 +98,11 @@ button:focus {
 .dialog {
   background-color: @white;
   border-radius: 10px;
+  .sizes(@w: 50%);
+
+  & form {
+    .flexContainer(@jc: space-between);
+  }
 
   & p {
     .textOptions(2em, 1em, 700);
@@ -107,5 +112,9 @@ button:focus {
   &::backdrop {
     background-color: @white;
     opacity: 0.5;
+  }
+
+  @media (max-width: 987px) {
+    .sizes(@w: 80%);
   }
 }

@@ -7,38 +7,29 @@ export class Dialog {
     this.dialog = dialog;
   }
 
-  private prizeTemplate() {
+  private baseTemplate(text: string) {
     const template = `
     <form method='dialog'>
-    <p>hehehehheehhePRIze</p>
-    <button class='button button--darkgrey'>x</button>
-    </form>`;
-    this.dialog.innerHTML = template;
-  }
-
-  private sponsorTemplate() {
-    const template = `<form method='dialog'>
-    <p>hehehehheehheSposNsors</p>
+    <p>Template for ${text}</p>
     <button class='button button--darkgrey'>x</button>
     </form>`;
     this.dialog.innerHTML = template;
   }
 
   private clickHandler(e: Event) {
-    const btn = <HTMLButtonElement>e.target;
-
-    if (btn.id === "prize") {
-      this.prizeTemplate();
-    } else if (btn.id === "sponsor") {
-      this.sponsorTemplate();
+    let el = <HTMLButtonElement | HTMLLinkElement>e.target;
+    if (!el.id && el.tagName === "IMG") {
+      el = <HTMLLinkElement>el.parentNode;
     }
 
+    this.baseTemplate(el.id);
     this.dialog.showModal();
   }
 
   init() {
     for (const btn of this.elms) {
       btn.addEventListener("click", (e) => {
+        e.preventDefault();
         this.clickHandler(e);
       });
     }
