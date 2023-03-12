@@ -7,27 +7,14 @@
 
   &-inner {
     .flexContainer(@jc: space-between, @ai: flex-end);
-
-    @media (max-width: 987px) {
-      display: block;
-    }
   }
 
   &-content {
     max-width: 50%;
-
-    @media (max-width: 987px) {
-      max-width: 100%;
-      .margins(@b: 4em);
-    }
   }
 
   &-title {
     .margins(@b: 1.6em);
-
-    @media (max-width: 987px) {
-      .margins(@b: 0.6em);
-    }
   }
 
   &-text {
@@ -39,18 +26,5 @@
     text-align: center;
     box-shadow: 0 0 5px @black;
     .paddings(@t: 2em, @r: 2em, @b: 2em, @l: 2em);
-
-    @media (max-width: 1440px) {
-      max-width: 35%;
-    }
-
-    @media (max-width: 1200px) {
-      max-width: 45%;
-    }
-
-    @media (max-width: 987px) {
-      max-width: 400px;
-      .margins(@l: auto, @r: auto);
-    }
   }
 }
