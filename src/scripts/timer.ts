@@ -1,12 +1,10 @@
-interface ITimeObj {
-  [key: string]: number;
-}
+import { IElements, ITimeObj } from "./interfaces";
 
 export class Timer {
   private eventTime: number = new Date(2024, 0).getTime();
-  private elms: NodeListOf<Element>;
+  private elms: IElements;
 
-  constructor(elms: NodeListOf<Element>) {
+  constructor(elms: IElements) {
     this.elms = elms;
   }
 

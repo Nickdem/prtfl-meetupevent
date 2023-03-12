@@ -1,8 +1,10 @@
+import { IBtnOrLink, IButtons } from "./interfaces";
+
 export class Dialog {
-  private elms: NodeListOf<HTMLButtonElement>;
+  private elms: IButtons;
   private dialog;
 
-  constructor(elms: NodeListOf<HTMLButtonElement>, dialog: HTMLDialogElement) {
+  constructor(elms: IButtons, dialog: HTMLDialogElement) {
     this.elms = elms;
     this.dialog = dialog;
   }
@@ -17,7 +19,7 @@ export class Dialog {
   }
 
   private clickHandler(e: Event) {
-    let el = <HTMLButtonElement | HTMLLinkElement>e.target;
+    let el = <IBtnOrLink>e.target;
     if (!el.id && el.tagName === "IMG") {
       el = <HTMLLinkElement>el.parentNode;
     }

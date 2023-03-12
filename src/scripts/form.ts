@@ -1,14 +1,7 @@
-interface IFormObj {
-  [key: string]: string;
-}
-
-// interface IFormInputs {
-//   [key: string]: HTMLInputElement | Element;
-// }
+import { IFormObj } from "./interfaces";
 
 export class Form {
   private formContainer: HTMLFormElement;
-  //   private formChildrens: IFormInputs = {};
   private formValues: IFormObj = {};
   private errorCls = "form-field--error";
   private successCls = "form-field--success";
@@ -83,7 +76,6 @@ export class Form {
       if (i.id) {
         const elId = i.id;
         this.formValues[elId] = "";
-        // this.formChildrens[elId] = i;
         i.addEventListener("input", (e: InputEvent) => {
           this.changeHandler(e, elId);
         });

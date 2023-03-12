@@ -1,7 +1,9 @@
-export class Timetable {
-  private elms: NodeListOf<HTMLButtonElement>;
+import { IButtons } from "./interfaces";
 
-  constructor(elms: NodeListOf<HTMLButtonElement>) {
+export class Timetable {
+  private elms: IButtons;
+
+  constructor(elms: IButtons) {
     this.elms = elms;
   }
 
