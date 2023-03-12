@@ -3,8 +3,8 @@ run-name: ${{ github.actor }} pushes changes to the ${{ github.ref_name }}.
 on:
   push:
     branches:
-      - '*'
-      - '!gh-pages'
+      - "*"
+      - "!gh-pages"
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -37,4 +37,3 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-
