@@ -19,6 +19,9 @@ export class Dialog {
   }
 
   private clickHandler(e: Event) {
+    e.preventDefault();
+    console.log(e);
+
     let el = <IBtnOrLink>e.target;
     if (!el.id && el.tagName === "IMG") {
       el = <HTMLLinkElement>el.parentNode;
@@ -31,7 +34,6 @@ export class Dialog {
   init() {
     for (const btn of this.elms) {
       btn.addEventListener("click", (e) => {
-        e.preventDefault();
         this.clickHandler(e);
       });
     }

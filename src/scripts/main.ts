@@ -1,4 +1,5 @@
 import { Dialog } from "./dialog";
+import { Events } from "./events";
 import { Form } from "./form";
 import { IButtons } from "./interfaces";
 import { Menu } from "./menu";
@@ -15,6 +16,7 @@ export default function init() {
   const formContainer: HTMLFormElement = document.querySelector(".form");
   const dialogBtns: IButtons = document.querySelectorAll(".dialog-btn");
   const dialogContainer: HTMLDialogElement = document.querySelector(".dialog");
+  const eventsBtn: HTMLButtonElement = document.querySelector(".events-button");
 
   const menu = new Menu(navigationContainer, menuButton);
   menu.init();
@@ -30,4 +32,7 @@ export default function init() {
 
   const dialog = new Dialog(dialogBtns, dialogContainer);
   dialog.init();
+
+  const events = new Events(eventsBtn);
+  events.init();
 }
